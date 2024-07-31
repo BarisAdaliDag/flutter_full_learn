@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ColumnRowLearn extends StatelessWidget {
   const ColumnRowLearn({super.key});
-
+//  5. video 52 dk
   @override
   Widget build(BuildContext context) {
     return Scaffold(

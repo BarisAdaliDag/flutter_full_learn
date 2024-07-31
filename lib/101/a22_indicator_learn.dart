@@ -1,3 +1,5 @@
+// 5. video 20 dk
+
 import 'package:flutter/material.dart';
 
 class IndicatorLearn extends StatelessWidget {
@@ -25,7 +27,7 @@ class CenterCircularRedProgress extends StatelessWidget {
         child: CircularProgressIndicator(
       color: redColor,
       strokeWidth: 10,
-      value: 0.9,
+      value: 0.9, // bu ozellik yuzde kac doluyor gostermek icin
       backgroundColor: Colors.white,
     ));
   }

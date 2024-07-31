@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'icon_learn.dart';
 import 'image_learn.dart';
-import 'stack_learn.dart';
+import 'a25_stack_learn.dart';
 
 class PageViewLearn extends StatefulWidget {
   const PageViewLearn({super.key});
@@ -32,13 +32,17 @@ class _PageViewLearnState extends State<PageViewLearn> {
           const Spacer(),
           FloatingActionButton(
             onPressed: () {
-              _pageController.previousPage(duration: _DurationUtility._durationLow, curve: Curves.slowMiddle);
+              _pageController.previousPage(
+                  duration: _DurationUtility._durationLow,
+                  curve: Curves.slowMiddle);
             },
             child: const Icon(Icons.chevron_left),
           ),
           FloatingActionButton(
             onPressed: () {
-              _pageController.nextPage(duration: _DurationUtility._durationLow, curve: Curves.slowMiddle);
+              _pageController.nextPage(
+                  duration: _DurationUtility._durationLow,
+                  curve: Curves.slowMiddle);
             },
             child: const Icon(Icons.chevron_right),
           ),

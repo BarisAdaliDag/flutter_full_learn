@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 5. video 3 dk
 class CustomWidgetLearn extends StatelessWidget {
   const CustomWidgetLearn({super.key});
   final String title = 'Food';
@@ -21,6 +22,9 @@ class CustomWidgetLearn extends StatelessWidget {
                 )),
           )),
           const SizedBox(height: 100),
+          const SizedBox(
+            height: 122,
+          ),
           CustomFootButton(title: title, onPressed: () {}),
         ],
       ),
@@ -29,6 +33,7 @@ class CustomWidgetLearn extends StatelessWidget {
 }
 
 mixin _ColorsUtility {
+  // sadece bu classta kullanilacak private ata
   final Color redColor = Colors.red;
   final Color white = Colors.white;
 }
