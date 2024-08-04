@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
+// 6. video 45 dk
+
+//ust kisimda veri alma verme yapilir immutuble-degismez veri yapisi bu yuzden final
 class StatefullLifeCycleLearn extends StatefulWidget {
   const StatefullLifeCycleLearn({super.key, required this.message});
   final String message;
 
   @override
-  State<StatefullLifeCycleLearn> createState() => _StatefullLifeCycleLearnState();
+  State<StatefullLifeCycleLearn> createState() =>
+      _StatefullLifeCycleLearnState();
 }
 
 class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
@@ -14,14 +18,19 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
 
   @override
   void didChangeDependencies() {
+    // initstate sonre calisir drawing once calisir.
+    // Sayfa kople draw ed'ld'ginde calisir
     super.didChangeDependencies();
     print('c');
   }
 
   @override
   void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
+    // ust classta veri degistiginde calisan kod
+    // kodda ust classta degisiklik olunca burada ust siniftaki degiklik ugulanir
     super.didUpdateWidget(oldWidget);
     if (oldWidget.message != widget.message) {
+      print("b");
       _message = widget.message;
       _computeName();
       setState(() {});
@@ -30,6 +39,7 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
 
   @override
   void dispose() {
+    // sayfadan ciktigi anda calisir
     super.dispose();
     _message = "";
   }
@@ -59,15 +69,26 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
       appBar: AppBar(
         title: Text(_message),
       ),
-      body: _isOdd
-          ? TextButton(onPressed: () {}, child: Text(_message))
-          : ElevatedButton(
+      body: Column(
+        children: [
+          _isOdd
+              ? TextButton(onPressed: () {}, child: Text(_message))
+              : ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      _message = "a";
+                    });
+                  },
+                  child: Text(_message)),
+          ElevatedButton(
               onPressed: () {
                 setState(() {
-                  _message = "a";
+                  _message = "Did update test";
                 });
               },
-              child: Text(_message)),
+              child: const Text("Did update test"))
+        ],
+      ),
     );
   }
 }

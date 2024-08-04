@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../product/language/language_items.dart';
 
+// 6. video 1.07 dk
 class TextFieldLearn extends StatefulWidget {
   const TextFieldLearn({super.key});
 
@@ -11,8 +12,11 @@ class TextFieldLearn extends StatefulWidget {
 }
 
 class _TextFieldLearnState extends State<TextFieldLearn> {
-  final key = GlobalKey();
+  // Her bir animated container için ayrı GlobalKey oluşturun.
+  final GlobalKey _keyOne = GlobalKey();
+  final GlobalKey _keyTwo = GlobalKey();
 
+  FocusNode focusNodeTextFieldBaris = FocusNode();
   FocusNode focusNodeTextFieldOne = FocusNode();
   FocusNode focusNodeTextFieldTwo = FocusNode();
 
@@ -25,8 +29,24 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
           children: [
             TextField(
               maxLength: 20,
-              buildCounter: (BuildContext context, {int? currentLength, bool? isFocused, int? maxLength}) {
-                return _animatedContainer(currentLength);
+              buildCounter: (context,
+                  {required currentLength,
+                  required isFocused,
+                  required maxLength}) {
+                return _animatedContainer(_keyOne, currentLength);
+              },
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(), labelText: 'baris yazdi'),
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            TextField(
+              maxLength: 20, // max uzunluk verme
+              //buildCounter textfield sol altinda custom widget olusturma
+              buildCounter: (BuildContext context,
+                  {int? currentLength, bool? isFocused, int? maxLength}) {
+                return _animatedContainer(_keyTwo, currentLength);
               },
               keyboardType: TextInputType.emailAddress,
               autofocus: true,
@@ -47,7 +67,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
     );
   }
 
-  AnimatedContainer _animatedContainer(int? currentLength) {
+  AnimatedContainer _animatedContainer(GlobalKey key, int? currentLength) {
     return AnimatedContainer(
       key: key,
       duration: const Duration(seconds: 1),
@@ -63,7 +83,7 @@ class TextProjectInputFormmater {
     if (newValue.text == "a") {
       return oldValue;
     }
-    return oldValue;
+    return newValue;
   });
 }
 

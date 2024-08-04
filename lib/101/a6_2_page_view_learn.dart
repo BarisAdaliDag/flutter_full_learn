@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'icon_learn.dart';
 import 'image_learn.dart';
-import 'a25_stack_learn.dart';
+import 'a5_5_stack_learn.dart';
 
+// 6. video 30 dk
 class PageViewLearn extends StatefulWidget {
   const PageViewLearn({super.key});
 
@@ -11,9 +12,11 @@ class PageViewLearn extends StatefulWidget {
 }
 
 class _PageViewLearnState extends State<PageViewLearn> {
-  final _pageController = PageController(viewportFraction: 0.7);
+  final _pageController = PageController(
+      viewportFraction: 0.7); // Yandaki sayfanin bir kismini gorunur yapiyor
 
   int _currentPageIndex = 0;
+
   void _updatePageIndex(int index) {
     setState(() {
       _currentPageIndex = index;
