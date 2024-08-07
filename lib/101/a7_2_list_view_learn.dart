@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 7.video 32 dk
 class ListViewLearn extends StatefulWidget {
   const ListViewLearn({super.key});
 
@@ -26,13 +27,16 @@ class _ListViewLearnState extends State<ListViewLearn> {
           const Divider(),
           SizedBox(
             height: 300,
-            child: ListView(shrinkWrap: true, scrollDirection: Axis.horizontal, children: [
-              Container(color: Colors.green, child: const Card()),
-              Container(color: Colors.white, width: 100),
-              Container(color: Colors.green, width: 100),
-              Container(color: Colors.white, width: 100),
-              Container(color: Colors.green, width: 100),
-            ]),
+            child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(color: Colors.green, child: const Card()),
+                  Container(color: Colors.white, width: 100),
+                  Container(color: Colors.green, width: 100),
+                  Container(color: Colors.white, width: 100),
+                  Container(color: Colors.green, width: 100),
+                ]),
           ),
           IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
           //xx

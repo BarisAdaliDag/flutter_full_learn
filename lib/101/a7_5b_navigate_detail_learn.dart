@@ -11,6 +11,7 @@ class _NavigateLearnDartState extends State<NavigateDetailLearnDart> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    //veri donuste veri yakalama bunu onermiyor 1. yontem
     //  ModalRoute.of(context).settings.arguments
   }
 
@@ -21,9 +22,11 @@ class _NavigateLearnDartState extends State<NavigateDetailLearnDart> {
       body: Center(
         child: ElevatedButton.icon(
             onPressed: () {
+              //veri donuste veri yakalama 2. yontem
               Navigator.of(context).pop(!widget.isOkey);
             },
-            icon: Icon(Icons.check, color: widget.isOkey ? Colors.red : Colors.green),
+            icon: Icon(Icons.check,
+                color: widget.isOkey ? Colors.red : Colors.green),
             label: widget.isOkey ? const Text('Red') : const Text('Onayla')),
       ),
     );

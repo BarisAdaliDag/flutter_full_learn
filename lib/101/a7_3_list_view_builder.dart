@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 7.video 47 dk
 class ListViewBuilderLearn extends StatefulWidget {
   const ListViewBuilderLearn({super.key});
 
@@ -20,7 +21,10 @@ class _ListViewBuilderLearnState extends State<ListViewBuilderLearn> {
           return SizedBox(
             height: 200,
             child: Column(
-              children: [Expanded(child: Image.network('https://picsum.photos/200')), Text('$index')],
+              children: [
+                Expanded(child: Image.network('https://picsum.photos/200')),
+                Text('$index')
+              ],
             ),
           );
         },
