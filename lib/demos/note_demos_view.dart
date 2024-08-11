@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import '../101/image_learn.dart';
 
 class NoteDemos extends StatelessWidget {
-  const NoteDemos({Key? key}) : super(key: key);
+  const NoteDemos({super.key});
   final _title = 'Create your first note';
   final _description = 'Add a note ';
   final _createNote = 'Create a Note';
@@ -54,8 +54,7 @@ class NoteDemos extends StatelessWidget {
 /// Center text widget
 class _SubTitleWidget extends StatelessWidget {
   const _SubTitleWidget(
-      {Key? key, required this.title, required this.textAlign})
-      : super(key: key);
+      {super.key, required this.title, required this.textAlign});
   final TextAlign textAlign;
   final String title;
 
@@ -74,9 +73,9 @@ class _SubTitleWidget extends StatelessWidget {
 
 class _TitleWidget extends StatelessWidget {
   const _TitleWidget({
-    Key? key,
+    super.key,
     required this.title,
-  }) : super(key: key);
+  });
 
   final String title;
 
