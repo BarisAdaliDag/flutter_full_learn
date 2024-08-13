@@ -16,11 +16,16 @@ import 'package:full_learn_flutter/202/a10_1_package_learn_view.dart';
 import 'package:full_learn_flutter/202/a11_2_animated_learn_view.dart';
 import 'package:full_learn_flutter/202/a11_3b_oop_learn_view.dart';
 import 'package:full_learn_flutter/202/a8_1_tabLearn.dart';
+import 'package:full_learn_flutter/202/cache/a12_1_shared_learn_cache.dart';
 import 'package:full_learn_flutter/202/theme/a10_2_light_theme.dart';
 import 'package:full_learn_flutter/demos/a5_6_stack_demo_view.dart';
 import 'package:full_learn_flutter/demos/a7_1_color_demos_view.dart';
 import 'package:full_learn_flutter/demos/a7_1b_color_life_cycle.dart';
 
+import '202/a13_1_sheet_learn.dart';
+import '202/a13_2_alert_learn.dart';
+import '202/cache/a12_2b_shared_list_cache.dart';
+import '202/cache/secure_context/secure_context_learn.dart';
 import 'demos/a7_4_my_collectıons.dart';
 
 void main() {
@@ -35,7 +40,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: LighTheme().theme,
-      home: const PackagLearnView(),
+      home: const AlertLearn(),
     );
   }
 }
