@@ -4,7 +4,8 @@ import 'package:full_learn_flutter/202/cache/a12_1_shared_learn_cache.dart';
 import 'package:full_learn_flutter/303/resource_model_15_1/service/reqress_service.dart';
 
 import '../../../product/service/project_dio.dart';
-import '../model/resource_model.dart';
+import '../model/resoruce_model.dart';
+
 import '../view/req_res_view.dart';
 
 //ilk  hali

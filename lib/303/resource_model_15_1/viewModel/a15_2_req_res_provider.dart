@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../product/global/resource_context.dart';
-import '../model/resource_model.dart';
+import '../model/resoruce_model.dart';
+
 import '../service/reqress_service.dart';
 
 // 43 dk

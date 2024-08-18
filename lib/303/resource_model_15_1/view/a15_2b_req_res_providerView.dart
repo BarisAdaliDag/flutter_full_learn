@@ -8,7 +8,8 @@ import '../../../202/a11_1_image_learn_202.dart';
 import '../../../product/global/resource_context.dart';
 import '../../../product/global/theme_notifer.dart';
 import '../../../product/service/project_dio.dart';
-import '../model/resource_model.dart';
+import '../model/resoruce_model.dart';
+
 import '../service/reqress_service.dart';
 import '../viewModel/a15_2_req_res_provider.dart';
 
