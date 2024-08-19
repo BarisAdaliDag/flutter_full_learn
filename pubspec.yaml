@@ -37,6 +37,8 @@ dependencies:
 #states
   provider: ^6.1.2
 
+  lottie: ^3.1.2
+
   
 
 dev_dependencies:

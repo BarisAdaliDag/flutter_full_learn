@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
       theme: context
           .watch<ThemeNotifer>()
           .currentTheme, // provider ile theme degistime
-      home: const ReqResViewProvider(),
+      home: const ReqResView(),
     );
   }
 }

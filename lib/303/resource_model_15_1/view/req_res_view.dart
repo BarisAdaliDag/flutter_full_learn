@@ -22,7 +22,7 @@ class _ReqResViewState extends ReqResViewModel {
       body: ListView.builder(
           itemCount: resources.length,
           itemBuilder: (BuildContext context, int index) {
-            //  inspect(resources[index]);
+            //  inspect(resources[index]);  run tıme wıdget dubug saglar
 
             return Card(
                 color: Color(resources[index].color.colorValue ?? 0),
