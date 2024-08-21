@@ -33,6 +33,7 @@ dependencies:
   flutter_secure_storage: ^9.2.2
 #Core
   equatable: ^2.0.5
+  collection: any
 
 #states
   provider: ^6.1.2
