@@ -6,6 +6,7 @@ import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 import '../product/global/theme_notifer.dart';
+import '../product/navigator_17_1/navigator_routes.dart';
 
 class LottieLearn extends StatefulWidget {
   const LottieLearn({super.key});
@@ -29,7 +30,8 @@ class _LottieLearnState extends State<LottieLearn>
 
   Future<void> navigateToHome() async {
     await Future.delayed(const Duration(seconds: 1));
-    // Navigator.of(context).pushReplacementNamed(NavigateRoutes.home.withParaf);
+    //17_1 navigation
+    Navigator.of(context).pushReplacementNamed(NavigateRoutes.home.withParaf);
   }
 
   @override

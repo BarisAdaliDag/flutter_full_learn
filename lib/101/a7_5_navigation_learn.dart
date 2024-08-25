@@ -12,7 +12,7 @@ class NavigationLearn extends StatefulWidget {
 }
 
 class _NavigationLearnState extends State<NavigationLearn>
-    with NavigatorManager {
+    with NavigatorManagerSimple {
   List<int> selectedItems = [];
 
   void addSelected(int index, bool isAdd) {
@@ -63,7 +63,7 @@ class _NavigationLearnState extends State<NavigationLearn>
 }
 
 //
-mixin NavigatorManager {
+mixin NavigatorManagerSimple {
   void navigateToWidget(BuildContext context, Widget widget) {
     Navigator.of(context).push(
       MaterialPageRoute(

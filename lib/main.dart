@@ -22,6 +22,7 @@ import 'package:full_learn_flutter/303/resource_model_15_1/view/req_res_view.dar
 import 'package:full_learn_flutter/demos/a5_6_stack_demo_view.dart';
 import 'package:full_learn_flutter/demos/a7_1_color_demos_view.dart';
 import 'package:full_learn_flutter/demos/a7_1b_color_life_cycle.dart';
+import 'package:full_learn_flutter/product/navigator_17_1/navigator_custom.dart';
 import 'package:provider/provider.dart';
 
 import '202/a13_1_sheet_learn.dart';
@@ -30,10 +31,12 @@ import '202/cache/a12_2b_shared_list_cache.dart';
 import '202/cache/secure_context/secure_context_learn.dart';
 import '303/a14_2_call_back_learn.dart';
 import '303/a14_3_tabbar_advance.dart';
+import '303/navigator_17_1/navigate_home_view.dart';
 import '303/resource_model_15_1/view/a15_2b_req_res_providerView.dart';
 import 'demos/a7_4_my_collectıons.dart';
 import 'product/global/resource_context.dart';
 import 'product/global/theme_notifer.dart';
+import 'product/navigator_17_1/navigator_manager.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -45,7 +48,7 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with NavigatorCustom {
   const MyApp({super.key});
 
   @override
@@ -55,7 +58,21 @@ class MyApp extends StatelessWidget {
       theme: context
           .watch<ThemeNotifer>()
           .currentTheme, // provider ile theme degistime
-      home: const ReqResView(),
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PackagLearnView();
+          },
+        );
+      },
+      // builder: (context,widget){
+
+      // },
+      // routes: NavigatorRoures().items,
+      onGenerateRoute:
+          onGenerateRoute, //! with NavigatorCustom  mixin ile kullanim kazandirdik
+      navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
+      home: const NavigateHomeView(),
     );
   }
 }
