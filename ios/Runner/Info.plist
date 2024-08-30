@@ -28,8 +28,8 @@
 	<string>LaunchScreen</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-  		<string>sms</string>
-  		<string>tel</string>
+		<string>sms</string>
+		<string>tel</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
@@ -50,5 +50,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>we need to library to sharing photo</string>
+	<key>NSCameraUsageDescription</key>
+	<string>we need to acces camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>we need to acces microphone usage</string>
 </dict>
 </plist>

@@ -31,6 +31,7 @@ import '202/cache/a12_2b_shared_list_cache.dart';
 import '202/cache/secure_context/secure_context_learn.dart';
 import '303/a14_2_call_back_learn.dart';
 import '303/a14_3_tabbar_advance.dart';
+import '303/mobx_image_picker_17_2/view/mobx_image_upload_view.dart';
 import '303/navigator_17_1/navigate_home_view.dart';
 import '303/resource_model_15_1/view/a15_2b_req_res_providerView.dart';
 import 'demos/a7_4_my_collectıons.dart';
@@ -72,7 +73,8 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       onGenerateRoute:
           onGenerateRoute, //! with NavigatorCustom  mixin ile kullanim kazandirdik
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-      home: const NavigateHomeView(),
+      home:
+          const MobxImageUpload(), //home aktif ise ongererate,navigatorKey pasif oluyor
     );
   }
 }

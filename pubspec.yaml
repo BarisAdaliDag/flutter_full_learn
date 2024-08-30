@@ -22,6 +22,7 @@ dependencies:
   url_launcher: ^6.3.0
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
+  image_picker: ^1.1.2
 #animation
   flutter_spinkit: ^5.2.1
 
@@ -37,6 +38,8 @@ dependencies:
 
 #states
   provider: ^6.1.2
+  flutter_mobx: ^2.2.1+1
+  mobx_codegen: ^2.6.1
 
   lottie: ^3.1.2
 
