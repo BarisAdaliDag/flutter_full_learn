@@ -1,6 +1,5 @@
 import 'package:image_picker/image_picker.dart';
 
-// 17 vid mobx image
 abstract class IImageUpload {
   final ImagePicker picker = ImagePicker();
   Future<XFile?> fetch();

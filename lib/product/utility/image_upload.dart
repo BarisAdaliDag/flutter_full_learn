@@ -1,5 +1,7 @@
 import 'package:image_picker/image_picker.dart';
 
+// 17 vid mobx image
+
 class ImageUploadManager {
   final ImagePicker _picker = ImagePicker();
 
